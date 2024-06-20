@@ -188,37 +188,4 @@ setInterval(
     }
     
   }, 10);
-</script>
-    <script language="javascript">
-setInterval(
-  function() {
-    
-    //修改 rgb(255,255,0) 为你需要的图标颜色
-    var ICON_COLOR = "rgb(0,0,0)";
-    
-    //修改 rgb(0,23,0) 为你需要的背景颜色
-    var CYCLE_COLOR = "rgb(255,255,255)";
-        
-    var frm = document.getElementById('launcher');
-    if(frm == null) return;
-    var buttons = frm.contentWindow.document.getElementsByTagName("button"); 
-    if(buttons == null) return;
-    var button = null;
-    if(buttons.length == null) {
-      button = buttons;
-    } else {
-      for(var j = 0; j < buttons.length; ++j) {
-        //data-garden-id="buttons.icon_button"
-        if(buttons[j].getAttribute('data-garden-id') == "buttons.icon_button") {
-           button = buttons[j];
-        }
-      }
-    }
-    var icons = button.getElementsByTagName("path");
-    button.style.backgroundColor = CYCLE_COLOR;
-    for(var j = 0; j < icons.length; ++j) {
-      var icon = icons[j];
-            icon.style.fill = ICON_COLOR;
-    }
-  }, 500);
-</script></body></html>
+</body></html>
